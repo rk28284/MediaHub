@@ -12,10 +12,15 @@ export const Allroutes = () => {
         <Routes>
             <Route path='/' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
-             <Route path='/media' element={<MediaPlayer/>}/>
-             <Route path='/dash' element={<Dashboard/>}/>
+             <Route path='/media' element={
+<Privateroute><MediaPlayer/></Privateroute>
 
-            <Route path='/upload' element={<Upload/>}/>
+
+             }/>
+            <Route path='/upload' element={
+
+                <Privateroute><Upload/></Privateroute>
+            }/>
 
             
         </Routes>
